@@ -1,0 +1,74 @@
+<div class="viewport">
+<p-toolbar>
+    <div class="ui-toolbar-group-left">
+      <h1 style="margin: 0px">Criminal Trespassing</h1>
+    </div>
+</p-toolbar>
+
+  <p-accordion>
+    <p-accordionTab header="Results"
+        [selected]="trespasserService.trespassers"
+        style="height:800px;">
+      <p-tabView
+          [(activeIndex)]="tabManagerService.index"
+          (onClose)="tabManagerService.closeTab($event)">
+        <p-tabPanel header="Trespassers List">
+          <p-table #dt
+              [value]="trespasserService.trespassers | async"
+              [columns]="selectedColumns"
+              [paginator]="true"
+              [rows]="10"
+              dataKey="id"
+              scrollHeight="450px"
+              [resizableColumns]="true"
+              selectionMode="single"
+              [(selection)]="selectedWarning"
+              (onRowSelect) = "onRowSelect($event)">
+            <ng-template pTemplate="caption">
+              <div style="text-align:right">
+                  <button pButton
+                    type="button"
+                    icon="pi pi-plus"
+                    (click)="newTrespasser($event)">
+                  </button>
+              </div>
+            </ng-template>
+            <ng-template pTemplate="header" let-columns>
+              <tr>
+                  <th *ngFor="let col of columns" [pSortableColumn]="getSortField(col)" pResizableColumn style="width:15%;">
+                      {{col.header}}
+                      <p-sortIcon
+                        [field]="getSortField(col)"
+                        ariaLabel="Activate to sort"
+                        ariaLabelDesc="Activate to sort in descending order"
+                        ariaLabelAsc="Activate to sort in ascending order">
+                      </p-sortIcon>
+                  </th>
+              </tr>
+              <tr>
+                <th *ngFor="let col of columns" class="ui-resizable-column">
+                  <input pInputText type="text" (input)="dt.filter($event.target.value, getSortField(col), 'startsWith')">
+                </th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-rowData let-columns="columns">
+              <tr [pContextMenuRow]="rowData" [pSelectableRow]="rowData">
+                  <td *ngFor="let col of columns" class="ui-resizable-column">
+                      {{ getCellData(rowData, col) }}
+                  </td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </p-tabPanel>
+        <p-tabPanel header="{{tab.label}}" *ngFor="let tab of tabManagerService.tabs" [closable]="true">
+          <app-ct-details [trespasserId] = "tab.value" (activateTabEvent)="tabManagerService.activateTab($event)"></app-ct-details>
+        </p-tabPanel>
+      </p-tabView>
+    </p-accordionTab>
+    <p-accordionTab header="Search" style="height:800px;">
+        <app-ct-search></app-ct-search>
+      </p-accordionTab>
+  </p-accordion>
+</div>
+
+<p-confirmDialog header="Delete Record?" icon="pi pi-exclamation-triangle" width="425"></p-confirmDialog>

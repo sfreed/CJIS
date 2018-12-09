@@ -1,0 +1,175 @@
+<p-toolbar>
+  <div class="ui-toolbar-group-right">
+      <button pButton type="button" icon="pi pi-check" (click)="save($event)"></button>
+      <button pButton type="button" icon="pi pi-window-maximize" (click)="popout($event)"></button>
+      <button pButton type="button" icon="pi pi-save" (click)="saveToHistory($event)"></button>
+  </div>
+</p-toolbar>
+<p-fieldset>
+    <p-header style="font-size:16px;">Reporting Officer</p-header>
+    <div class="ui-g-12 ui-fluid" style="font-size:16px;padding:10px;">
+      <div class="ui-g-3">
+        <span class="ui-float-label">
+          <input id="float-reportingOfficer" type="text" [(ngModel)]="warning.reportingOfficer.lastName" pInputText>
+          <label for="float-reportingOfficer">Last Name</label>
+        </span>
+      </div>
+      <div class="ui-g-3">
+        <span class="ui-float-label">
+          <input id="float-reportingOfficer" type="text" [(ngModel)]="warning.reportingOfficer.firstName" pInputText>
+          <label for="float-reportingOfficer">First Name</label>
+        </span>
+      </div>
+      <div class="ui-g-3">
+        <span class="ui-float-label">
+          <p-calendar
+            id="float-issueDate"
+            [(ngModel)]="warning.issueDate"
+            showButtonBar="true"
+            [monthNavigator]="true"
+            [yearNavigator]="true"
+            [showIcon]="true">
+          </p-calendar>
+          <label for="float-issueDate">Issue Date</label>
+        </span>
+      </div>
+      <div class="ui-g-3">
+        <span class="ui-float-label">
+          <p-calendar
+            id="float-expirationDate"
+            [(ngModel)]="warning.expirationDate"
+            showButtonBar="true"
+            [monthNavigator]="true"
+            [yearNavigator]="true"
+            [showIcon]="true">
+          </p-calendar>
+          <label for="float-expirationDate">Expiration Date</label>
+        </span>
+      </div>
+    </div>
+  </p-fieldset>
+
+  <p-fieldset>
+    <p-header  style="font-size:16px;">Trespasser</p-header>
+    <div class="ui-g-12 ui-fluid" style="font-size:16px;padding:10px">
+      <div class="ui-g-4">
+        <span class="ui-float-label">
+          <input id="float-lastName" type="text" [(ngModel)]="warning.trespasser.lastName" pInputText>
+          <label for="float-lastName">Last Name</label>
+        </span>
+      </div>
+      <div class="ui-g-4">
+        <span class="ui-float-label">
+          <input id="float-firstName" type="text" [(ngModel)]="warning.trespasser.firstName" pInputText>
+          <label for="float-firstName">First Name</label>
+        </span>
+      </div>
+      <div class="ui-g-4">
+        <span class="ui-float-label">
+          <input id="float-middleName" type="text" [(ngModel)]="warning.trespasser.middleName" pInputText>
+          <label for="float-middleName">Middle Name</label>
+        </span>
+      </div>
+    </div>
+    <div class="ui-g-12 ui-fluid" style="font-size:16px;padding:10px">
+      <div class="ui-g-4">
+        <span class="ui-float-label">
+          <input id="float-ssn" type="text" [(ngModel)]="warning.trespasser.ssn" pInputText>
+          <label for="float-ssn">SSN</label>
+        </span>
+      </div>
+      <div class="ui-g-4">
+        <span class="ui-float-label">
+          <input id="float-oln" type="text" [(ngModel)]="warning.oln" pInputText>
+          <label for="float-oln">OLN</label>
+        </span>
+      </div>
+      <div class="ui-g-4">
+        <span class="ui-float-label">
+          <p-calendar
+            id="float-dob"
+            [(ngModel)]="warning.trespasser.dob"
+            showButtonBar="true"
+            [monthNavigator]="true"
+            [yearNavigator]="true"
+            [showIcon]="true">
+          </p-calendar>
+          <label for="float-dob">Date of Birth</label>
+        </span>
+      </div>
+    </div>
+    <div class="ui-g-12 ui-fluid" style="font-size:16px;padding:10px">
+      <div class="ui-g-2">
+        <span class="ui-float-label">
+          <p-dropdown [options]="constants.race" [(ngModel)]="warning.trespasser.race"></p-dropdown>
+          <label for="float-race">Race</label>
+        </span>
+      </div>
+      <div class="ui-g-2">
+        <span class="ui-float-label">
+          <p-dropdown [options]="constants.sex" [(ngModel)]="warning.trespasser.sex"></p-dropdown>
+          <label for="float-sex">Sex</label>
+        </span>
+      </div>
+      <div class="ui-g-2">
+        <span class="ui-float-label">
+          <input id="float-weight" type="text" [(ngModel)]="warning.trespasser.weight" pInputText>
+          <label for="float-weight">Weight</label>
+        </span>
+      </div>
+      <div class="ui-g-2">
+        <span class="ui-float-label">
+          <input id="float-height" type="text" [(ngModel)]="warning.trespasser.height" pInputText>
+          <label for="float-height">Height</label>
+        </span>
+      </div>
+      <div class="ui-g-2">
+        <span class="ui-float-label">
+          <p-dropdown [options]="constants.eyes" [(ngModel)]="warning.trespasser.eyes"></p-dropdown>
+          <label for="float-eyes">Eyes</label>
+        </span>
+      </div>
+      <div class="ui-g-2">
+        <span class="ui-float-label">
+          <p-dropdown [options]="constants.hair" [(ngModel)]="warning.trespasser.hair"></p-dropdown>
+          <label for="float-hair">Hair</label>
+        </span>
+      </div>
+    </div>
+  </p-fieldset>
+  <p-fieldset>
+    <p-header  style="font-size:16px;">Owner / Proprietor</p-header>
+    <div class="ui-g-12 ui-fluid" style="font-size:16px;padding:10px">
+      <div class="ui-g-3">
+        <span class="ui-float-label">
+          <input id="float-proprietor" type="text" [(ngModel)]="warning.premisis.name" pInputText>
+          <label for="float-proprietor">Premisis</label>
+        </span>
+      </div>
+      <div class="ui-g-2">
+        <span class="ui-float-label">
+          <input id="float-address" type="text" [(ngModel)]="warning.premisis.address.street_address" pInputText>
+          <label for="float-address">Address</label>
+        </span>
+      </div>
+      <div class="ui-g-2">
+        <span class="ui-float-label">
+          <input id="float-city" type="text" [(ngModel)]="warning.premisis.address.city" pInputText>
+          <label for="float-city">City</label>
+        </span>
+      </div>
+      <div class="ui-g-1">
+        <span class="ui-float-label">
+          <input id="float-state" type="text" [(ngModel)]="warning.premisis.address.state" pInputText>
+          <label for="float-state">State</label>
+        </span>
+      </div>
+      <div class="ui-g-1">
+        <span class="ui-float-label">
+          <input id="float-zip" type="text" [(ngModel)]="warning.premisis.address.zip" pInputText>
+          <label for="float-zip">Zip</label>
+        </span>
+      </div>
+    </div>
+  </p-fieldset>
+

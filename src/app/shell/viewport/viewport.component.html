@@ -1,0 +1,27 @@
+<div class="viewport">
+  <div>
+    <dx-drawer #leftDrawer [openedStateMode]="'overlap'" [revealMode]="'slide'" template="left-template" [opened]="false"
+      [height]="875" [closeOnOutsideClick]="true">
+      <div *dxTemplate="let data of 'left-template'">
+        <div class="side-bar-wrapper">
+            <p-panelMenu [model]="navigationService.items" [style]="{'width':'279px'}" [multiple]="false"></p-panelMenu>
+        </div>
+      </div>
+      <dx-drawer #rightDrawer [openedStateMode]="'overlap'" position="right" template="right-template" [height]="875"
+        [closeOnOutsideClick]="true">
+        <div *dxTemplate="let data of 'right-template'">
+            <div style="font-size: xx-large; font-weight: 600; padding:0 50px 0 50px;">History</div>
+          <p-orderList [value]="historyService.history" controlsPosition="right" *ngIf="historyService.history.length > 0">
+            <ng-template let-history pTemplate="item">
+                <div class="ui-helper-clearfix">
+                    <div style="font-size:14px;margin:15px 5px 0 0;">{{history.name}} <p-button style="float:right;" label="View" icon="pi pi-check"></p-button></div>
+                    <div style="font-size:10px;margin:15px 5px 0 0;">{{history.time | date: 'dd/MM/yyyy'}}</div>
+                    <div style="font-size:10px;margin:15px 5px 0 0;"></div>
+                </div>
+            </ng-template>
+          </p-orderList>
+        </div>
+      </dx-drawer>
+    </dx-drawer>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+article {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0px;
+}
+
+main {
+  flex-grow: 1;
+  background-color: #476981;
+  padding: 0px;
+}
+
+header, main, footer {
+  flex-shrink: 0;
+}
+
+.colors {
+  background-color: #476981;
+  border: 1px solid #D1E3EA;
+  background-color: #328CC1;
+
+}

@@ -1,0 +1,67 @@
+
+.ui-fieldset, .ui-fieldset .ui-fieldset-legend {
+  padding: 0px;
+  font-size: 20px;
+
+}
+
+body .ui-tabview.ui-tabview-top .ui-tabview-nav li.ui-state-active{
+  background-color: #476981;
+}
+
+body .ui-accordion .ui-accordion-header {
+  margin-bottom: 2px;
+}
+  body .ui-accordion .ui-accordion-header a {
+    padding: 0.571em 1em;
+    border: 1px solid #c8c8c8;
+    color: #333333;
+    background-color: #f4f4f4;
+    color: #333333;
+    font-weight: 400;
+    -moz-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+  }
+    body .ui-accordion .ui-accordion-header a .ui-accordion-toggle-icon {
+      color: #848484; }
+      body .ui-accordion .ui-accordion-header a .ui-accordion-toggle-icon.pi-caret-right:before {
+        content: ""; }
+      body .ui-accordion .ui-accordion-header a .ui-accordion-toggle-icon.pi-caret-down:before {
+        content: "";
+       }
+  body .ui-accordion .ui-accordion-header:not(.ui-state-active):not(.ui-state-disabled):hover a {
+    background-color: #D1E3EA;
+    border: 1px solid #476981;
+    color: #333333;
+  }
+    body .ui-accordion .ui-accordion-header:not(.ui-state-active):not(.ui-state-disabled):hover a .ui-accordion-toggle-icon {
+      color: #333333;
+    }
+  body .ui-accordion .ui-accordion-header:not(.ui-state-disabled).ui-state-active a {
+    background-color: #328CC1;
+    border: 1px solid #328CC1;
+    color: #ffffff; }
+    body .ui-accordion .ui-accordion-header:not(.ui-state-disabled).ui-state-active a .ui-accordion-toggle-icon {
+      color: #ffffff;
+    }
+  body .ui-accordion .ui-accordion-header:not(.ui-state-disabled).ui-state-active:hover a {
+    border: 1px solid #D1E3EA;
+    background-color: #328CC1;
+    color: #ffffff; }
+    body .ui-accordion .ui-accordion-header:not(.ui-state-disabled).ui-state-active:hover a .ui-accordion-toggle-icon {
+      color: #ffffff;
+    }
+body .ui-accordion .ui-accordion-content {
+  padding: 0.571em 1em;
+  border: 1px solid #c8c8c8;
+  background-color: #D1E3EA;
+  color: #333333;
+  padding: 0.571em 1em;
+  height: 680px;
+}
+
+body .ui-tabview .ui-tabview-panels {
+  height: 600px;
+}

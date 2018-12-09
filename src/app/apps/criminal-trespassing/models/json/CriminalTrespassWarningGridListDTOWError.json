@@ -1,0 +1,13 @@
+{
+  "Error": {
+    "Number": 40005,
+    "Title": "Error processing filter",
+    "DisplayMessage": "Unable to retrieve record(s) for {CriminalTrespassWarningGridViewDTO}. Please verify the connection.",
+    "Type": "Data Processing",
+    "Action": 0,
+    "VideoLink": null,
+    "HelpLink": null,
+    "InternalMessage": "Error Type: <typeoferror> \r\n Error Message: Unable to communicate with Database. \r\n Unknown error"
+  },
+  "List": []
+}

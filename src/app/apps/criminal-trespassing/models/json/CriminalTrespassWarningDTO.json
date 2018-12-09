@@ -1,0 +1,24 @@
+{
+  "Error": {
+    "Number": 0,
+    "Title": "No error",
+    "DisplayMessage": "No Error has been reported",
+    "Type": "Default",
+    "Action": 0,
+    "VideoLink": null,
+    "HelpLink": null,
+    "InternalMessage": "No Error has been reported"
+  },
+  "CriminalTrespassWarningId": "97cc44c9-3902-ce2d-06be-d06a26267441",
+  "PersonId": "9ec3b15c-5287-508a-79a4-7fb58d2db4a6",
+  "Person": null,
+  "ReportingOfficerId": "686ae71d-9fcf-cdb8-6246-db10c61ea036",
+  "IssueDate": "2018-03-28T18:00:00",
+  "ExpirationDate": "2020-10-07T18:00:00",
+  "PremiseName": "PremiseName1",
+  "PremiseOwner": "PremiseOwner1",
+  "LocationId": "b76274a2-6ab7-d7d5-6b6c-52e3499ecef1",
+  "Comments": "Comments1",
+  "IsActive": false,
+  "Location": null
+}

@@ -1,0 +1,73 @@
+{
+  "PageTitle": "Create a new Bolo record for Sheriff Department",
+  "Error": {
+    "Number": 0,
+    "Title": "No error",
+    "DisplayMessage": "No Error has been reported",
+    "Type": "Default",
+    "Action": 0,
+    "VideoLink": null,
+    "HelpLink": null,
+    "InternalMessage": "No Error has been reported"
+  },
+  "VehicleColorCodeList": [{
+    "VehicleColorCodeId": 1,
+    "Code": "RED",
+    "Description": "Red",
+    "IsActive": true,
+    "IsUserEditable": false
+  }, {
+    "VehicleColorCodeId": 2,
+    "Code": "BLK",
+    "Description": "Black",
+    "IsActive": true,
+    "IsUserEditable": false
+  }, {
+    "VehicleColorCodeId": 3,
+    "Code": "SLV",
+    "Description": "Silver",
+    "IsActive": true,
+    "IsUserEditable": false
+  }],
+  "VehicleMakeList": [{
+    "VehicleMakeId": 1,
+    "MakeName": "Ford",
+    "Description": "Ford Motor Company",
+    "IsActive": true,
+    "IsUserEditable": true
+  }, {
+    "VehicleMakeId": 2,
+    "MakeName": "Dodge",
+    "Description": "Mopar",
+    "IsActive": true,
+    "IsUserEditable": true
+  }, {
+    "VehicleMakeId": 3,
+    "MakeName": "Honda",
+    "Description": "Honda Manufacturing",
+    "IsActive": true,
+    "IsUserEditable": true
+  }],
+  "VehicleModelList": [{
+    "VehicleModelId": 0,
+    "VehicleMakeId": 1,
+    "ModelName": "Fusion",
+    "Description": "Fusion",
+    "IsActive": true,
+    "IsUserEditable": true
+  }, {
+    "VehicleModelId": 0,
+    "VehicleMakeId": 2,
+    "ModelName": "Focus",
+    "Description": "Focus",
+    "IsActive": true,
+    "IsUserEditable": true
+  }, {
+    "VehicleModelId": 0,
+    "VehicleMakeId": 3,
+    "ModelName": "F150",
+    "Description": "F150 Truck",
+    "IsActive": true,
+    "IsUserEditable": true
+  }]
+}
